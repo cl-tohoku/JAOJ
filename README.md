@@ -1,5 +1,5 @@
 # JAOJ
-Japanese argument omission  judgement
+Japanese argument omission  judgment
 
 ## 1.対象ドキュメント
 [「現代日本語書き言葉均衡コーパス」(BCCWJ)](https://clrd.ninjal.ac.jp/bccwj/) の書籍ドメインのドキュメント`00002_A_PB43_00001` ~ `00036_B_PB42_00014`
