@@ -13,11 +13,11 @@ Example [annotated_data/00002_A_PB43_00001-jaoj.tsv](https://github.com/tohoku-e
 | |属性名 |内容 |
 |:---|:---|:---|
 |1 |`type` |アノテーション対象項が元コーパスで表出か省略か（表出:"dep", 省略:"zero") | 
-|2 |`dep_arg_span` |アノテーション対象項の単語スパン |
-|3 |`filler` |埋め込まれた項の表出系 |
+|2 |`dep_arg_span` |アノテーション対象項が表出している場合の単語スパン |
+|3 |`filler` |アノテーション対象項が省略されている場合に埋め込まれた項の表出系 |
 |4 |`insert_position` |埋め込まれた項の挿入位置（[挿入箇所の文id, 挿入箇所の次にくるべきの文節番号]） | 
 |5 |`pred_span` |アノテーション対象述語の単語スパン|
-|6 |`casemk`|格属性（ga, ni, o） |
+|6 |`casemk`|格属性（"ga", "ni", "o"） |
 |7 |`answers` |作業者の回答（作業者に紐付いたid順に各作業者の回答を表示しており、アルファベットは[フローチャート](https://github.com/tohoku-edunlp/JAOJ/blob/main/decision_tree.pdf) の終端を示す。） |
 
 ## 　4.関連研究
