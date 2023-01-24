@@ -6,10 +6,8 @@ Japanese argument omission  judgement
 （`00003_A_PB59_00001`, `00004_A_PB22_00002`, `00010_A_PB50_00003`を除く）
 
 
-## 2.公開データのサンプル
-### 2.1 BCCWJ-DepParaPasとの差分データ
-Example
-[annotated_data/00002_A_PB43_00001-jaoj.tsv](https://github.com/tohoku-edunlp/JAOJ/blob/main/annotated_data/00002_A_PB43_00001-jaoj.tsv)
+## 2.BCCWJ-DepParaPasとの差分データ
+Example [annotated_data/00002_A_PB43_00001-jaoj.tsv](https://github.com/tohoku-edunlp/JAOJ/blob/main/annotated_data/00002_A_PB43_00001-jaoj.tsv)
 
 ## 3.付与されている情報の属性
 | |属性名 |内容 |
