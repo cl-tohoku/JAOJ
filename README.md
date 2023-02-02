@@ -25,7 +25,7 @@ Example [annotated_data/00002_A_PB43_00001-jaoj.tsv](https://github.com/tohoku-e
 ## 4.License
 </a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-## 　5.関連研究
+## 5.関連研究
 - 浅原正幸, 松本裕治. 『現代日本語書き言葉均衡コーパス』に対する係り受け・並列構造アノテーション. 自然言語処理, Vol. 25, No. 4, pp. 331–356, 2018.
 - 小西光, 小山田由紀, 浅原正幸, 柏野和佳子, 前川喜久雄. Bccwj 係り受け関係アノテーション付与のための文境界再認定. 第 3 回コーパス日本語学ワークショップ予稿集, pp. 135–142.国立国語研究所, 2013.
 - Kikuo MAEKAWA, Makoto YAMAZAKI, Toshinobu OGISO, Takehiko MARUYAMA,Hideki OGURA, Wakako KASHINO, Hanae KOISO, Masaya YAMAGUCHI, Makiro TANAKA, and Yasuharu DEN. Balanced corpus of contemporary written japanese.Language resources and evaluation, Vol. 48, No. 2, pp. 345–371, 2014.
