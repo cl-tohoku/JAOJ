@@ -18,7 +18,7 @@ Example [annotated_data/00002_A_PB43_00001-jaoj.tsv](https://github.com/tohoku-e
 |4 |`insert_position` |埋め込まれた項の挿入位置（[挿入箇所が先頭から何文目か, 挿入箇所の次にくるべきの文節の番号]） | 
 |5 |`pred_span` |アノテーション対象述語の単語スパン|
 |6 |`casemk`|格属性（"ga", "ni", "o"） |
-|7 |`answers` |作業者の回答（作業者に紐付いたid順に各作業者の回答を表示しており、アルファベットは[フローチャート](https://github.com/tohoku-edunlp/JAOJ/blob/main/decision_tree.pdf) の終端を示す。） |
+|7 |`answers` |作業者の回答（作業者に紐付いたid順に各作業者の回答を表示しており、アルファベットは[フローチャート](https://github.com/cl-tohoku/JAOJ/blob/main/decision_tree.pdf) の終端を示す。） |
 
 なお、2および5の単語スパンは`[先頭から何文目の単語か, 項または述語の開始位置が文の先頭から短単位で何単語目か, 項または述語の終了位置が文の先頭から短単位で何単語目か]`を表している。
 
