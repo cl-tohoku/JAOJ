@@ -7,6 +7,7 @@ Japanese argument omission  judgment
 
 
 ## 2.BCCWJ-DepParaPasとの差分データ
+本研究で使用したBCCWJ-DepParaPASのバージョンは、3.3.0_1.2.0_20160301である。  
 Example [annotated_data/00002_A_PB43_00001-jaoj.tsv](https://github.com/tohoku-edunlp/JAOJ/blob/main/annotated_data/00002_A_PB43_00001-jaoj.tsv)
 
 ## 3.付与されている情報の属性
