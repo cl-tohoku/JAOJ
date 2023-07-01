@@ -1,35 +1,85 @@
-# JAOJ
-Japanese argument omission  judgment
+# Japanese Argument Omission  Judgment
 
-## 1.対象ドキュメント
-[「現代日本語書き言葉均衡コーパス」(BCCWJ)](https://clrd.ninjal.ac.jp/bccwj/) の書籍ドメインのドキュメント`00002_A_PB43_00001` ~ `00036_B_PB42_00014`
-（`00003_A_PB59_00001`, `00004_A_PB22_00002`, `00010_A_PB50_00003`を除く）
+## Source Corpus
+[The Balanced Corpus of Contemporary Written Japanese (BCCWJ)](https://clrd.ninjal.ac.jp/bccwj/en/index.html) 
+- We used documents from the book Domain.
+- `00002_A_PB43_00001` ~ `00036_B_PB42_00014`
+（excluding `00003_A_PB59_00001`, `00004_A_PB22_00002`, `00010_A_PB50_00003`）
 
 
-## 2.BCCWJ-DepParaPasとの差分データ
-本研究で使用したBCCWJ-DepParaPASのバージョンは、3.3.0_1.2.0_20160301である。  
-Example [annotated_data/00002_A_PB43_00001-jaoj.tsv](https://github.com/tohoku-edunlp/JAOJ/blob/main/annotated_data/00002_A_PB43_00001-jaoj.tsv)
+## BCCWJ-DepParaPAS
+In this study, we created a corpus by overlaying information on ellipsis judgments on BCCWJ-DepParaPAS, a widely-used Japanese corpus with predicate-argument structure annotation. The version of BCCWJ-DepParaPAS we used is  3.3.0_1.2.0_20160301. The annotation procedure is explained in detail in the paper.
 
-## 3.付与されている情報の属性
-| |属性名 |内容 |
+
+## Attributes of annotated information
+| | Attribute | Details |
 |:---|:---|:---|
-|1 |`type` |アノテーション対象項が元コーパスで表出か省略か（表出:"dep", 省略:"zero") | 
-|2 |`dep_arg_span` |アノテーション対象項が表出している場合の単語スパン |
-|3 |`filler` |アノテーション対象項が省略されている場合に埋め込まれた項の表出系 |
-|4 |`insert_position` |埋め込まれた項の挿入位置（[挿入箇所が先頭から何文目か, 挿入箇所の次にくるべきの文節の番号]） | 
-|5 |`pred_span` |アノテーション対象述語の単語スパン|
-|6 |`casemk`|格属性（"ga", "ni", "o"） |
-|7 |`answers` |作業者の回答（作業者に紐付いたid順に各作業者の回答を表示しており、アルファベットは[フローチャート](https://github.com/cl-tohoku/JAOJ/blob/main/decision_tree.pdf) の終端を示す。） |
+|1 |`type` |Whether the argument is  or omitted (present: "dep", omitted: "zero") | 
+|2 |`dep_arg_span` |Word span when the annotated argument is expressed |
+|3 |`filler` |Expression of the embedded filler when the annotated argument is omitted |
+|4 |`insert_position` |Insertion position of the embedded filler ([the number of the sentence from the beginning, the number of the syntactic chunk that should follow the insertion point]) | 
+|5 |`pred_span` |Span of a target predicate|
+|6 |`casemk`|Case marker (NOM: "ga", ACC: "o", DAT: "ni") |
+|7 |`answers` |Annotators' answers (Displaying the answers of each annotator in the order of their IDs, and the alphabets represent the terminals in the decision tree. The details are explained in the paper. ) |
 
-なお、2および5の単語スパンは`[先頭から何文目の単語か, 項または述語の開始位置が文の先頭から短単位で何単語目か, 項または述語の終了位置が文の先頭から短単位で何単語目か]`を表している。
+Note that the word spans for attributes 2 and 5 represent [the number of the sentence from the beginning of the text, the position of the start of the argument or predicate in words from the beginning of the sentence, the position of the end of the argument or predicate in words from the beginning of the sentence].
 
-## 4.License
+## License
 </a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-## 5.関連研究
-- 浅原正幸, 松本裕治. 『現代日本語書き言葉均衡コーパス』に対する係り受け・並列構造アノテーション. 自然言語処理, Vol. 25, No. 4, pp. 331–356, 2018.
-- 小西光, 小山田由紀, 浅原正幸, 柏野和佳子, 前川喜久雄. Bccwj 係り受け関係アノテーション付与のための文境界再認定. 第 3 回コーパス日本語学ワークショップ予稿集, pp. 135–142.国立国語研究所, 2013.
-- Kikuo MAEKAWA, Makoto YAMAZAKI, Toshinobu OGISO, Takehiko MARUYAMA,Hideki OGURA, Wakako KASHINO, Hanae KOISO, Masaya YAMAGUCHI, Makiro TANAKA, and Yasuharu DEN. Balanced corpus of contemporary written japanese.Language resources and evaluation, Vol. 48, No. 2, pp. 345–371, 2014.
-- 植田禎子, 飯田龍, 浅原正幸, 松本裕治, 徳永健伸. 『現代日本語書き言葉均衡コーパス』に対する述語項構造・共参照情報アノテーション. 第 8 回コーパス日本語学ワークショップ予稿集, pp. 205–214. 国立国語研究所, 2015.
-- 浅原正幸, 大村舞. Bccwj-DepParaPas:『現代日本語書き言葉均衡コーパス』係り受け・並列構造と述語項構造・共参照アノテーションの重ね合わせと可視化. 言語処理学会第 22 回年次大会発表論文集, pp. 489–492, 2016.10
-- 石月由紀子, 栗林 樹生, 松林 優一郎, 笹野 遼平, 乾 健太郎. 日本語話者の項省略判断に関するアノテーションとモデリング. 言語処理学会第 29 回年次大会発表論文集, , 2023.
+## Related work
+Use the following citation if you use the data set:
+BibTeX
+```
+% Syntactic Dependency and Coordination Structure
+@Article{浅原正幸2018,
+ title={『現代日本語書き言葉均衡コーパス』に対する係り受け・並列構造アノテーション},
+ author={浅原 正幸 and 松本 裕治},
+ journal = {自然言語処理},
+ volume = {25},
+ number = {4},
+ pages = 	 {331--356},
+ year = 	 {2018}
+}
+
+% Sentence Segmentation
+@inProceedings{小西光2013bccwj,
+  title={BCCWJ 係り受け関係アノテーション付与のための文境界再認定},
+  author={小西光 and 小山田由紀 and 浅原正幸 and 柏野 和佳子 and 前川喜久雄},
+  booktitle = {第3回コーパス日本語学ワークショップ予稿集},
+  pages = 	 {135--142},
+  year = 	 {2013},
+  organization = {国立国語研究所}
+}
+
+% BCCWJ Original Data
+@article{maekawa2014balanced,
+  title={Balanced corpus of contemporary written Japanese},
+  author={MAEKAWA, Kikuo and YAMAZAKI, Makoto and OGISO, Toshinobu and MARUYAMA, Takehiko and OGURA, Hideki and KASHINO, Wakako and KOISO, Hanae and YAMAGUCHI, Masaya and TANAKA, Makiro and DEN, Yasuharu},
+  journal={Language resources and evaluation},
+  volume={48},
+  number={2},
+  pages={345--371},
+  year={2014},
+  publisher={Springer}
+}
+
+% Semantic Dependency and Coreference Information
+@inProceedings{植田禎子2015bccwj,
+  title={『現代日本語書き言葉均衡コーパス』に対する述語項構造・共参照情報アノテーション},
+  author={植田禎子 and 飯田龍 and 浅原正幸 and 松本裕治 and 徳永健伸},
+  booktitle = {第8回コーパス日本語学ワークショップ予稿集},
+  pages = 	 {205--214},
+  year = 	 {2015},
+  organization = {国立国語研究所}
+}
+
+% the Resource
+@inProceedings{浅原正幸2016bccwj,
+  title={BCCWJ-DepParaPAS:『現代日本語書き言葉均衡コーパス』係り受け・並列構造と述語項構造・共参照アノテーションの重ね合わせと可視化},
+  author={浅原 正幸 and 大村 舞},
+  booktitle = {言語処理学会第22回年次大会発表論文集},
+  pages = 	 {489--492},
+  year = 	 {2016}
+}
+```
