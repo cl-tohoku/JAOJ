@@ -1,4 +1,5 @@
 # Japanese Argument Omission  Judgment
+Paper: [To Drop or Not to Drop? Predicting Argument Ellipsis Judgments: A Case Study in Japanese](https://arxiv.org/abs/2404.11315)
 
 ## Source Corpus
 [The Balanced Corpus of Contemporary Written Japanese (BCCWJ)](https://clrd.ninjal.ac.jp/bccwj/en/index.html) 
@@ -31,6 +32,15 @@ Note that the word spans for attributes 2 and 5 represent [the number of the sen
 Use the following citation if you use the data set:
 BibTeX
 ```
+@misc{ishizuki2024drop,
+      title={To Drop or Not to Drop? Predicting Argument Ellipsis Judgments: A Case Study in Japanese}, 
+      author={Yukiko Ishizuki and Tatsuki Kuribayashi and Yuichiroh Matsubayashi and Ryohei Sasano and Kentaro Inui},
+      year={2024},
+      eprint={2404.11315},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
 % Syntactic Dependency and Coordination Structure
 @Article{浅原正幸2018,
  title={『現代日本語書き言葉均衡コーパス』に対する係り受け・並列構造アノテーション},
